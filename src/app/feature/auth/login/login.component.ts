@@ -6,15 +6,16 @@ import { AuthService } from '../../../shared/service/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
+  selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.sass']
 })
 
 
 export class LoginComponent implements OnInit {
 
   /** define if front is communicating with api */
-  isLoading = false;
+  isLoading = true;
 
   constructor(public authService: AuthService, private router: Router) {}
 
@@ -23,9 +24,11 @@ export class LoginComponent implements OnInit {
 
     if (this.authService.getIsAuth()) {
       this.router.navigate(['']);
+    } else {
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000);
     }
-
-    this.isLoading = false;
   }
 
 

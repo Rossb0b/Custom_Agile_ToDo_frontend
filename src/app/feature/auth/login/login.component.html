@@ -1,12 +1,15 @@
-<div class="container">
+<div class="row d-flex no-padding no-margin" *ngIf="isLoading" style="min-height: 100%;">
+  <div class="col-12 m-auto">
+    <div class="lds-dual-ring m-auto"></div>
+  </div>
+</div>
 
-  <div class="row mt-4">
-    <div class="mx-auto col-12 col-md-10 col-lg-6">
+<div *ngIf="!isLoading" class="row no-padding no-margin" style="min-height: 100%;">
+  <div class="col-12">
 
-      <mat-spinner *ngIf="isLoading"></mat-spinner>
-
-      <mat-card>
-        <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+    <div class="row mt-4">
+      <mat-card class="col-md-4 col-8 mx-auto">
+        <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
           <mat-form-field>
             <input
             matInput
@@ -37,8 +40,7 @@
           *ngIf="!isLoading">Login</button>
         </form>
       </mat-card>
-
     </div>
-  </div>
 
+  </div>
 </div>

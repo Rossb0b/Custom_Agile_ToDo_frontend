@@ -21,6 +21,7 @@ import { DefaultLayoutComponent } from './layout/default/default-layout.componen
 import { ErrorComponent } from './shared/component/error/error.component';
 import { LoginComponent } from './feature/auth/login/login.component';
 import { SignupComponent } from './feature/auth/signup/signup.component';
+import { HomeHeaderComponent } from './core/navigation/home-header.component';
 
 // import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 
@@ -31,6 +32,7 @@ import { SignupComponent } from './feature/auth/signup/signup.component';
     LoginComponent,
     SignupComponent,
     DefaultLayoutComponent,
+    HomeHeaderComponent,
   ],
   imports: [
     CommonModule,
