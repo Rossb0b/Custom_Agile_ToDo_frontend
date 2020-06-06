@@ -8,9 +8,9 @@ import { BoardCreateComponent } from 'src/app/feature/board/create/board-create.
 import { BoardEditComponent } from 'src/app/feature/board/edit/board-edit.component';
 import { BoardShowComponent } from 'src/app/feature/board/show/board-show.component';
 import { LoggedLayoutComponent } from 'src/app/layout/logged/logged-layout.component';
-import { OrganisationCreateComponent } from 'src/app/feature/organisation/create/organisation-create.component';
-import { OrganisationEditComponent } from 'src/app/feature/organisation/edit/organisation-edit.component';
-import { OrganisationViewComponent } from 'src/app/feature/organisation/view/organisation-view.component';
+import { OrganizationCreateComponent } from 'src/app/feature/organization/create/organization-create.component';
+import { OrganizationEditComponent } from 'src/app/feature/organization/edit/organization-edit.component';
+import { OrganizationViewComponent } from 'src/app/feature/organization/view/organization-view.component';
 
 const routes: Routes = [
   {
@@ -34,18 +34,18 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'create-organisation',
-    component: OrganisationCreateComponent,
+    path: 'create-organization',
+    component: OrganizationCreateComponent,
     canActivate: [AuthGuard],
   },
   {
-    path: 'edit-organisation/:organisationName',
-    component: OrganisationEditComponent,
+    path: 'edit-organization/:organizationName',
+    component: OrganizationEditComponent,
     canActivate: [AuthGuard],
   },
   {
-    path: 'view-organisation/:organisationName',
-    component: OrganisationViewComponent,
+    path: 'view-organization/:organizationName',
+    component: OrganizationViewComponent,
     canActivate: [AuthGuard],
   },
 ];

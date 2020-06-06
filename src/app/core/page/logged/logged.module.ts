@@ -9,11 +9,11 @@ import { BoardShowComponent } from 'src/app/feature/board/show/board-show.compon
 import { BoardEditComponent } from 'src/app/feature/board/edit/board-edit.component';
 import { BoardCreateComponent } from 'src/app/feature/board/create/board-create.component';
 import { LoggedLayoutComponent } from 'src/app/layout/logged/logged-layout.component';
-import { OrganisationViewComponent } from 'src/app/feature/organisation/view/organisation-view.component';
-import { OrganisationEditComponent } from 'src/app/feature/organisation/edit/organisation-edit.component';
-import { OrganisationCreateComponent } from 'src/app/feature/organisation/create/organisation-create.component';
+import { OrganizationViewComponent } from 'src/app/feature/organization/view/organization-view.component';
+import { OrganizationEditComponent } from 'src/app/feature/organization/edit/organization-edit.component';
+import { OrganizationCreateComponent } from 'src/app/feature/organization/create/organization-create.component';
 import { BoardComponent } from './board/board.component';
-import { OrganisationComponent } from './organisation/organisation.component';
+import { OrganizationComponent } from './organization/organization.component';
 
 
 @NgModule({
@@ -23,10 +23,10 @@ import { OrganisationComponent } from './organisation/organisation.component';
     BoardShowComponent,
     BoardEditComponent,
     BoardCreateComponent,
-    OrganisationComponent,
-    OrganisationViewComponent,
-    OrganisationEditComponent,
-    OrganisationCreateComponent,
+    OrganizationComponent,
+    OrganizationViewComponent,
+    OrganizationEditComponent,
+    OrganizationCreateComponent,
   ],
   imports: [
     CommonModule,
