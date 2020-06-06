@@ -1,7 +1,5 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, AfterViewChecked, AfterContentChecked, AfterContentInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
-import { Subscription } from 'rxjs';
 
 import { AuthService } from '../../../shared/service/auth.service';
 
@@ -14,6 +12,7 @@ import { AuthService } from '../../../shared/service/auth.service';
 
 export class SignupComponent implements OnInit {
 
+  /** define if front is communicating with api */
   isLoading = true;
 
   constructor(public authService: AuthService) {}
@@ -21,7 +20,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.isLoading = false;
-    }, 1000);
+    }, 300);
   }
 
   onSignup(form: NgForm) {

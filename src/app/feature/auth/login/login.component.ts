@@ -23,11 +23,11 @@ export class LoginComponent implements OnInit {
     this.isLoading = true;
 
     if (this.authService.getIsAuth()) {
-      this.router.navigate(['']);
+      this.router.navigate(['board']);
     } else {
       setTimeout(() => {
         this.isLoading = false;
-      }, 1000);
+      }, 300);
     }
   }
 

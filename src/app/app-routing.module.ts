@@ -12,6 +12,11 @@ const routes: Routes = [
     component: DefaultLayoutComponent,
     data: { state: 'home' },
   },
+  {
+    path: 'board',
+    loadChildren: 'src/app/core/page/logged/logged.module#LoggedModule',
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

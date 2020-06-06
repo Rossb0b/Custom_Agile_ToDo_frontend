@@ -10,7 +10,7 @@
     <div class="row mt-4">
     <mat-card class="mx-auto col-8 col-md-4">
       <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
-        <mat-form-field>
+        <mat-form-field color="accent">
           <input
           matInput
           type="email"
@@ -22,7 +22,7 @@
           <mat-error *ngIf="emailInput.invalid">Please enter a valid E-mail</mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field color="accent">
           <input
           matInput
           type="password"
@@ -34,7 +34,7 @@
           <mat-error *ngIf="passwordInput.invalid">Please enter a valid password</mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field color="accent">
           <input
           matInput
           type="text"
@@ -46,7 +46,7 @@
           <mat-error *ngIf="firstnameInput.invalid">Please enter a valid firstname</mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field color="accent">
           <input
           matInput
           type="text"
@@ -62,7 +62,8 @@
         mat-raised-button
         color="accent"
         type="submit"
-        *ngIf="!isLoading">Signup</button>
+        *ngIf="!isLoading"
+        style="color: #ffffff">Signup</button>
       </form>
     </mat-card>
     </div>
