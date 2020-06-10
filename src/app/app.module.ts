@@ -17,11 +17,12 @@ import { ErrorInterceptor } from './shared/helper/error-interceptor';
 
 import { AppComponent } from './app.component';
 
-import { DefaultLayoutComponent } from './layout/default/default-layout.component';
 import { ErrorComponent } from './shared/component/error/error.component';
 import { LoginComponent } from './feature/auth/login/login.component';
 import { SignupComponent } from './feature/auth/signup/signup.component';
 import { HomeHeaderComponent } from './core/navigation/home/home-header.component';
+import { RegisterComponent } from './core/page/register/register.component';
+import { VisitorHeaderComponent } from './core/navigation/visitor-header/visitor-header.component';
 
 // import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 
@@ -29,9 +30,6 @@ import { HomeHeaderComponent } from './core/navigation/home/home-header.componen
   declarations: [
     AppComponent,
     ErrorComponent,
-    LoginComponent,
-    SignupComponent,
-    DefaultLayoutComponent,
     HomeHeaderComponent,
   ],
   imports: [
