@@ -27,6 +27,6 @@ import { VisitorHomeComponent } from '../../page/visitor-home/visitor-home.compo
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-  ]
+  ],
 })
 export class VisitorLayoutModule { }
