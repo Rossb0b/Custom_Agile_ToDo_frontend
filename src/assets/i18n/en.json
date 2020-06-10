@@ -1,0 +1,19 @@
+{
+  "login": {
+    "sentence": "Log into your account",
+    "login": "Login",
+    "enterEmail": "Enter e-mail address",
+    "enterPassword": "Enter password",
+    "doLogin": "Log in",
+    "loginWithGoogle": "Log in with Google",
+    "forgotPassword": "Forgot password ?",
+    "createAccount": "Create an account"
+  },
+  "register": {
+    "enterFirstname": "Enter firstname",
+    "enterLastname": "Enter lastname",
+    "enterPasswordCheck": "Enter password (check)",
+    "doRegister": "Register",
+    "alreadyOwnAccount": "Already have an account"
+  }
+}
