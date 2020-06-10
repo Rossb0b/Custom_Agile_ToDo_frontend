@@ -7,6 +7,9 @@ import { RegisterComponent } from '../../page/register/register.component';
 import { AngularMaterialModule } from 'src/app/shared/angular-material.module';
 import { LoginComponent } from '../../page/login/login.component';
 import { VisitorHeaderComponent } from '../../navigation/visitor-header/visitor-header.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -20,6 +23,8 @@ import { VisitorHeaderComponent } from '../../navigation/visitor-header/visitor-
     CommonModule,
     VisitorLayoutRoutingModule,
     AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class VisitorLayoutModule { }
