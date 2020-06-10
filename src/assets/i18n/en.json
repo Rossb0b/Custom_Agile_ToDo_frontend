@@ -12,7 +12,7 @@
   "register": {
     "enterFirstname": "Enter firstname",
     "enterLastname": "Enter lastname",
-    "EnterPasswordCheck": "Enter password (check)",
+    "enterPasswordCheck": "Enter password (check)",
     "doRegister": "Register",
     "alreadyOwnAccount": "Already have an account"
   }
