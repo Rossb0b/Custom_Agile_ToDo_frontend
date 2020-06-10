@@ -10,6 +10,7 @@ import { VisitorHeaderComponent } from '../../navigation/visitor-header/visitor-
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { VisitorHomeComponent } from '../../page/visitor-home/visitor-home.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
     LoginComponent,
     RegisterComponent,
     VisitorHeaderComponent,
+    VisitorHomeComponent,
   ],
   imports: [
     CommonModule,
