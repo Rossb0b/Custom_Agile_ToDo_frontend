@@ -10,15 +10,12 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler) {
       // We check if url request is our api
       if (req.url.includes('') || req.url.includes('http://localhost:3000')) {
-        const authToken = this.authService.getToken();
+        const authToken = localStorage.getItem('jwt');
         const authRequest = req.clone({
             headers: req.headers.set('Authorization', 'Bearer ' + authToken)
         });
         return next.handle(authRequest);
-      } else {
-        return next.handle(req);
       }
-
+        return next.handle(req);
     }
-
 }
