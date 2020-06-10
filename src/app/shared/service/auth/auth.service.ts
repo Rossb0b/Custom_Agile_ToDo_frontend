@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ApiService } from './api.service';
-import { User } from '../interface/user.interface';
+import { ApiService } from '../api/api.service';
+import { User } from '../../interface/user.interface';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { UserService } from './user.service';
+import { UserService } from '../user/user.service';
 
 @Injectable({
   providedIn: 'root'
