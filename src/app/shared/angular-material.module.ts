@@ -18,7 +18,8 @@ import {
   MatTabsModule,
   MatDividerModule,
   MatListModule,
-  MatBadgeModule
+  MatBadgeModule,
+  MatIconModule
 } from '@angular/material';
 
 @NgModule({
@@ -42,6 +43,7 @@ import {
     MatDividerModule,
     MatListModule,
     MatBadgeModule,
+    MatIconModule,
   ]
 })
 export class AngularMaterialModule {
