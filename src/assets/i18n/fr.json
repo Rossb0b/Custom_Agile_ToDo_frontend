@@ -12,7 +12,7 @@
   "register": {
     "enterFirstname": "Saisir le prénom",
     "enterLastname": "Saisir le nom",
-    "enterPasswordCheck": "Saisir le mot de passe (vérification",
+    "enterPasswordCheck": "Saisir le mot de passe (vérification)",
     "doRegister": "S'inscrire",
     "alreadyOwnAccount": "J'ai déjà un compte"
   }
