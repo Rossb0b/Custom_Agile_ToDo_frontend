@@ -1,0 +1,19 @@
+{
+  "login": {
+    "sentence": "Connectez-vous à votre compte",
+    "login": "Connexion",
+    "enterEmail": "Saisir l'addresse e-mail",
+    "enterPassword": "Saisir le mot de passe",
+    "doLogin": "Se connecter",
+    "loginWithGoogle": "Se connecter avec Google",
+    "forgotPassword": "Mot de passe oublié ?",
+    "createAccount": "Créer un compte"
+  },
+  "register": {
+    "enterFirstname": "Saisir le prénom",
+    "enterLastname": "Saisir le nom",
+    "EnterPasswordCheck": "Saisir le mot de passe (vérification",
+    "doRegister": "S'inscrire",
+    "alreadyOwnAccount": "J'ai déjà un compte"
+  }
+}

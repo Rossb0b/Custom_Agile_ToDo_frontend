@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 // import { BrowserXhr } from '@angular/http';
 
 import { CommonModule } from '@angular/common';
@@ -18,6 +18,12 @@ import { ErrorInterceptor } from './shared/helper/error-interceptor';
 import { AppComponent } from './app.component';
 
 import { ErrorComponent } from './shared/component/error/error.component';
+import { TranslateModule, TranslateLoader, TranslateService, TranslateStore } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function createHttpLoader(http: HttpClient) {
+	return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -32,7 +38,13 @@ import { ErrorComponent } from './shared/component/error/error.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatIconModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createHttpLoader, // exported factory function needed for AoT compilation
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
