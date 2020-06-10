@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
+  loading = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,10 +34,14 @@ export class RegisterComponent implements OnInit {
   }
 
   async register(): Promise<void> {
+    this.loading = true;
+
     try {
       await this.userService.create(this.form.value);
     } catch (error) {
       throw error;
+    } finally {
+      this.loading = false;
     }
 
     this.router.navigateByUrl('/login');

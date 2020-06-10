@@ -11,6 +11,7 @@ import { UserService } from 'src/app/shared/service/user.service';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
+  loading = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,6 +34,8 @@ export class LoginComponent implements OnInit {
 
   async login(): Promise<void> {
     if (this.form.valid) {
+      this.loading = true;
+
       try {
         const req = await this.authService.login(this.form.value);
         const token = req.token;
@@ -40,6 +43,8 @@ export class LoginComponent implements OnInit {
         this.userService.setUser(req.user);
       } catch (error) {
         throw error;
+      } finally {
+        this.loading = false;
       }
 
       this.router.navigateByUrl('/');

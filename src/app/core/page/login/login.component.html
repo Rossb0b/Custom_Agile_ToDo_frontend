@@ -3,7 +3,9 @@
   <form [formGroup]="form" (ngSubmit)="login()">
     <input type="text" placeholder="Saisir l'adresse e-mail" formControlName="email">
     <input type="password" placeholder="Saisir le mot de passe" class="mt-1" formControlName="password">
-    <button mat-button class="submit-btn">Se connecter</button>
+    <button mat-button class="submit-btn" [disabled]="loading ? '' : null">
+      <mat-spinner diameter="20" class="loading-spinner" *ngIf="loading"></mat-spinner> <ng-container *ngIf="!loading">Se connecter</ng-container>
+    </button>
   </form>
   <div class="google-login">
     <button mat-button class="google-connect-btn">
