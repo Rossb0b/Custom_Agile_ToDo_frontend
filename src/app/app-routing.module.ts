@@ -11,6 +11,7 @@ const routes: Routes = [
   {
     path: 'app',
     loadChildren: './core/layout/default/default-layout.module#DefaultLayoutModule',
+    canActivate: [AuthGuard],
   },
 ];
 

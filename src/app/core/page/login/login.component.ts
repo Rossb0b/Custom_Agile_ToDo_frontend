@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
         this.loading = false;
       }
 
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/app');
     }
   }
 }
