@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VisitorHeaderComponent } from './visitor-header.component';
+import { AngularMaterialModule } from 'src/app/shared/angular-material.module';
 
 describe('VisitorHeaderComponent', () => {
   let component: VisitorHeaderComponent;
@@ -8,7 +9,10 @@ describe('VisitorHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VisitorHeaderComponent ]
+      declarations: [VisitorHeaderComponent],
+      imports: [
+        AngularMaterialModule,
+      ],
     })
     .compileComponents();
   }));

@@ -12,6 +12,6 @@ import { AngularMaterialModule } from 'src/app/shared/angular-material.module';
     CommonModule,
     DefaultLayoutRoutingModule,
     AngularMaterialModule,
-  ]
+  ],
 })
 export class DefaultLayoutModule { }

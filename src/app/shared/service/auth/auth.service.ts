@@ -8,7 +8,7 @@ import { UserService } from '../user/user.service';
   providedIn: 'root',
 })
 export class AuthService {
-  private jwtHelper = new JwtHelperService();
+  jwtHelper = new JwtHelperService();
 
   constructor(
     private apiService: ApiService,

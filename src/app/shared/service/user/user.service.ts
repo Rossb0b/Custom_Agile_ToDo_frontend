@@ -4,7 +4,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { User } from '../../interface/user.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   currentUserSubject = new BehaviorSubject<User>(null);

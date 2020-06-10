@@ -10,5 +10,5 @@ export interface Organization {
   }];
   board: [{
     boardId: string;
-  }]
+  }];
 }
