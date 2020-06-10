@@ -18,18 +18,11 @@ import { ErrorInterceptor } from './shared/helper/error-interceptor';
 import { AppComponent } from './app.component';
 
 import { ErrorComponent } from './shared/component/error/error.component';
-import { HomeHeaderComponent } from './core/navigation/home/home-header.component';
-import { RegisterComponent } from './core/page/register/register.component';
-import { VisitorHeaderComponent } from './core/navigation/visitor-header/visitor-header.component';
-import { VisitorHomeComponent } from './core/page/visitor-home/visitor-home.component';
-
-// import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    HomeHeaderComponent,
   ],
   imports: [
     CommonModule,
