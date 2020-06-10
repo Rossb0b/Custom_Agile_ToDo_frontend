@@ -3,18 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './shared/guard/auth.guard';
 
-import { DefaultLayoutComponent } from './layout/default/default-layout.component';
-
-
 const routes: Routes = [
   {
     path: '',
-    component: DefaultLayoutComponent,
-    data: { state: 'home' },
+    loadChildren: './core/layout/visitor/visitor-layout.module#VisitorLayoutModule',
   },
   {
-    path: 'board',
-    loadChildren: 'src/app/core/page/logged/logged.module#LoggedModule',
+    path: 'app',
+    loadChildren: './core/layout/default/default-layout.module#DefaultLayoutModule',
     canActivate: [AuthGuard],
   },
 ];

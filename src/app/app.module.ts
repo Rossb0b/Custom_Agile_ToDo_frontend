@@ -17,22 +17,12 @@ import { ErrorInterceptor } from './shared/helper/error-interceptor';
 
 import { AppComponent } from './app.component';
 
-import { DefaultLayoutComponent } from './layout/default/default-layout.component';
 import { ErrorComponent } from './shared/component/error/error.component';
-import { LoginComponent } from './feature/auth/login/login.component';
-import { SignupComponent } from './feature/auth/signup/signup.component';
-import { HomeHeaderComponent } from './core/navigation/home/home-header.component';
-
-// import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    LoginComponent,
-    SignupComponent,
-    DefaultLayoutComponent,
-    HomeHeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -49,6 +39,6 @@ import { HomeHeaderComponent } from './core/navigation/home/home-header.componen
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ErrorComponent]
+  entryComponents: [ErrorComponent],
 })
 export class AppModule { }
