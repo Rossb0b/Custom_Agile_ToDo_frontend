@@ -18,8 +18,6 @@ import { ErrorInterceptor } from './shared/helper/error-interceptor';
 import { AppComponent } from './app.component';
 
 import { ErrorComponent } from './shared/component/error/error.component';
-import { LoginComponent } from './feature/auth/login/login.component';
-import { SignupComponent } from './feature/auth/signup/signup.component';
 import { HomeHeaderComponent } from './core/navigation/home/home-header.component';
 import { RegisterComponent } from './core/page/register/register.component';
 import { VisitorHeaderComponent } from './core/navigation/visitor-header/visitor-header.component';
