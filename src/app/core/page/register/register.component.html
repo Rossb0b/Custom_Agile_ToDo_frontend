@@ -7,7 +7,7 @@
     <input type="password" placeholder="{{ 'login.enterPassword' | translate }}" class="mt-1" formControlName="password">
     <input type="password" placeholder="{{ 'register.enterPasswordCheck' | translate }}" class="mt-1" formControlName="passwordVerif">
     <button mat-button class="submit-btn" [disabled]="loading ? '' : null">
-      <mat-spinner diameter="20" class="loading-spinner" *ngIf="loading"></mat-spinner> <ng-container *ngIf="!loading">{{ 'login.doRegister' | translate }}</ng-container>
+      <mat-spinner diameter="20" class="loading-spinner" *ngIf="loading"></mat-spinner> <ng-container *ngIf="!loading">{{ 'register.doRegister' | translate }}</ng-container>
     </button>
   </form>
   <div class="footer">

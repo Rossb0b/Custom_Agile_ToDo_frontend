@@ -15,5 +15,17 @@
     "enterPasswordCheck": "Saisir le mot de passe (vérification)",
     "doRegister": "S'inscrire",
     "alreadyOwnAccount": "J'ai déjà un compte"
+  },
+  "aside": {
+    "overview": "Vue d'ensemble",
+    "boards": "Boards",
+    "repos": "Repos"
+  },
+  "header": {
+    "search": "Rechercher",
+    "myProfile": "Mon profile",
+    "notifsParams": "Paramèters de notifications",
+    "help": "Aide",
+    "logout": "Se déconnecter"
   }
 }

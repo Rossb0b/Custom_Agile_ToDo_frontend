@@ -1,1 +1,41 @@
-<p>user-header works!</p>
+<mat-toolbar class="header">
+  <div class="container">
+    <mat-icon class="icon" (click)="toggleSidenav()">
+      menu
+    </mat-icon>
+    <strong routerLink="/app">OurBrand</strong>
+    <div class="align-right">
+      <input type="text" placeholder="{{ 'header.search' | translate }}">
+      <button mat-icon-button class="search-icon">
+        <mat-icon>search</mat-icon>
+      </button>
+      <span class="avatar" [matMenuTriggerFor]="menu">
+        {{ user?.firstname.charAt(0).toUpperCase() + user?.lastname.charAt(0).toUpperCase() }}
+      </span>
+      <mat-menu #menu="matMenu" class="menu">
+        <div class="menu-header mb-1">
+          <span class="avatar mr-2" [matMenuTriggerFor]="menu">
+            {{ user?.firstname.charAt(0).toUpperCase() + user?.lastname.charAt(0).toUpperCase() }}
+          </span>
+          {{ user?.firstname + ' ' + user?.lastname }}
+        </div>
+        <button mat-menu-item class="menu-btn">
+          <mat-icon class="menu-icon">face</mat-icon>
+          <span>{{ 'header.myProfile' | translate }}</span>
+        </button>
+        <button mat-menu-item class="menu-btn">
+          <mat-icon class="menu-icon">notifications</mat-icon>
+          <span>{{ 'header.notifsParams' | translate }}</span>
+        </button>
+        <button mat-menu-item class="menu-btn">
+          <mat-icon class="menu-icon">live_help</mat-icon>
+          <span>{{ 'header.help' | translate }}</span>
+        </button>
+        <button mat-menu-item class="menu-btn separate-btn" routerLink="/">
+          <mat-icon class="menu-icon">power_settings_new</mat-icon>
+          <span>{{ 'header.logout' | translate }}</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

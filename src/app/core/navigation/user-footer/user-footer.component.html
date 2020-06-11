@@ -1,1 +1,8 @@
-<p>user-footer works!</p>
+<div class="footer">
+  <div class="container">
+    <select (change)="onLanguageChange($event)" [(ngModel)]="lang">
+      <option value="fr" selected>Français</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+</div>

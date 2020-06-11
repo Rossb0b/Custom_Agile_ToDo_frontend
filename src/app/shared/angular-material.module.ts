@@ -20,6 +20,7 @@ import {
   MatListModule,
   MatBadgeModule,
   MatIconModule,
+  MatMenuModule,
 } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -56,6 +57,7 @@ export function createHttpLoader(http: HttpClient) {
     MatBadgeModule,
     MatIconModule,
     TranslateModule,
+    MatMenuModule,
   ],
 })
 export class AngularMaterialModule {
