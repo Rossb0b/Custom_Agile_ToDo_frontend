@@ -1,6 +1,6 @@
 {
   "extends": "tslint-config-airbnb-base",
   "rules": {
-    "linebreak-style": false,
+    "linebreak-style": false
   }
 }

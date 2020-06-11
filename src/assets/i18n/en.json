@@ -15,5 +15,17 @@
     "enterPasswordCheck": "Enter password (check)",
     "doRegister": "Register",
     "alreadyOwnAccount": "Already have an account"
+  },
+  "aside": {
+    "overview": "Overview",
+    "boards": "Boards",
+    "repos": "Repos"
+  },
+  "header": {
+    "search": "Search",
+    "myProfile": "My profile",
+    "notifsParams": "Notifications settings",
+    "help": "Help",
+    "logout": "Log out"
   }
 }

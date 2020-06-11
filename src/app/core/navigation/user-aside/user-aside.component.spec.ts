@@ -1,26 +1,32 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VisitorHeaderComponent } from './visitor-header.component';
+import { UserAsideComponent } from './user-aside.component';
+import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from 'src/app/shared/angular-material.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
-describe('VisitorHeaderComponent', () => {
-  let component: VisitorHeaderComponent;
-  let fixture: ComponentFixture<VisitorHeaderComponent>;
+describe('UserAsideComponent', () => {
+  let component: UserAsideComponent;
+  let fixture: ComponentFixture<UserAsideComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [VisitorHeaderComponent],
+      declarations: [UserAsideComponent],
       imports: [
+        FormsModule,
         AngularMaterialModule,
         TranslateModule.forRoot(),
+        HttpClientTestingModule,
+        RouterTestingModule,
       ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VisitorHeaderComponent);
+    fixture = TestBed.createComponent(UserAsideComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

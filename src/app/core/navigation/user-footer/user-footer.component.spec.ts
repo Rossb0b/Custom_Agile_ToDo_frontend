@@ -1,19 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VisitorFooterComponent } from './visitor-footer.component';
-import { AngularMaterialModule } from 'src/app/shared/angular-material.module';
+import { UserFooterComponent } from './user-footer.component';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-describe('VisitorFooterComponent', () => {
-  let component: VisitorFooterComponent;
-  let fixture: ComponentFixture<VisitorFooterComponent>;
+describe('UserFooterComponent', () => {
+  let component: UserFooterComponent;
+  let fixture: ComponentFixture<UserFooterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [VisitorFooterComponent],
+      declarations: [UserFooterComponent],
       imports: [
-        AngularMaterialModule,
         FormsModule,
         TranslateModule.forRoot(),
       ],
@@ -22,7 +20,7 @@ describe('VisitorFooterComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VisitorFooterComponent);
+    fixture = TestBed.createComponent(UserFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

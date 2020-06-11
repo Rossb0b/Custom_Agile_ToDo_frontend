@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<app-user-header></app-user-header>
+<mat-sidenav-container>
+  <mat-sidenav #sideNav class="side-nav" [mode]="!isDesktop ? 'over' : 'side'" [opened]="isDesktop">
+    <app-user-aside></app-user-aside>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-user-footer class="footer"></app-user-footer>

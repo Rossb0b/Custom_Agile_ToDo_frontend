@@ -9,7 +9,9 @@ import { User } from '../../interface/user.interface';
 export class UserService {
   currentUserSubject = new BehaviorSubject<User>(null);
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+  ) { }
 
   getCurrentUser(): Observable<User> {
     return this.currentUserSubject.asObservable();
@@ -25,5 +27,14 @@ export class UserService {
 
   create(user: User): Promise<any> {
     return this.apiService.post('/user', user);
+  }
+
+  async connectUser(): Promise<void> {
+    try {
+      const user = await this.apiService.get('/user');
+      this.setUser(user);
+    } catch (e) {
+      throw new Error(e);
+    }
   }
 }

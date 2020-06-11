@@ -8,6 +8,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AuthService } from 'src/app/shared/service/auth/auth.service';
 import { UserService } from 'src/app/shared/service/user/user.service';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   template: '',
@@ -28,6 +29,7 @@ describe('LoginComponent', () => {
         RouterTestingModule.withRoutes([{
           path: 'app', component: EmptyComponent,
         }]),
+        TranslateModule.forRoot(),
       ],
       declarations: [LoginComponent, EmptyComponent],
     })

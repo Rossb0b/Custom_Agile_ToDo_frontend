@@ -7,6 +7,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { UserService } from 'src/app/shared/service/user/user.service';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
@@ -21,6 +22,7 @@ describe('RegisterComponent', () => {
         ReactiveFormsModule,
         HttpClientTestingModule,
         RouterTestingModule,
+        TranslateModule.forRoot(),
       ],
     })
     .compileComponents();

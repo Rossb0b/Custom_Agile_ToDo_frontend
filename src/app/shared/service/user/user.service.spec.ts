@@ -39,4 +39,18 @@ describe('UserService', () => {
     spyOn(apiService, 'post').and.callFake(() => Promise.resolve({}));
     service.create({} as any).then((res: any) => expect(res).toEqual({}));
   });
+
+  it('should connect user', async () => {
+    const apiService = TestBed.get(ApiService);
+    spyOn(apiService, 'get').and.callFake(() => Promise.resolve({ id: 1 }));
+    spyOn(service, 'setUser');
+    await service.connectUser();
+    expect(service.setUser).toHaveBeenCalledWith({ id: 1 });
+  });
+
+  it('connect user should throw', () => {
+    const apiService = TestBed.get(ApiService);
+    spyOn(apiService, 'get').and.callFake(() => Promise.reject('fake error'));
+    service.connectUser().catch((e) => { expect(e).toEqual(Error('fake error')); });
+  });
 });

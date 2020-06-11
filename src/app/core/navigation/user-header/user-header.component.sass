@@ -1,0 +1,92 @@
+.header
+  height: 64px !important // prevent material theme switch header height from device height
+  background:#0052CC
+
+.container
+  max-width: 1200px
+  height: 100%
+  margin: auto
+  display: flex
+  align-items: center
+
+.align-right
+  margin-left: auto
+  display: flex
+  align-items: center
+
+  a 
+    font-size: 14px
+    font-weight: lighter
+    color: #ffffff
+    cursor: pointer
+    margin-left: 10px
+
+    &:hover
+      text-decoration: underline
+
+    &::before
+      content: '|'
+      margin-right: 10px
+
+strong
+  cursor: default
+  color: #fff
+  margin-left: 10px
+
+  &:focus
+    outline: none
+
+.icon
+  cursor: pointer
+
+input
+  border: 2px solid #ffffff
+  border-radius: 4px
+  background: #ffffff
+  padding-left: 10px
+  margin-left: auto
+  position: relative
+  left: 36px
+  width: 100%
+  padding-right: 35px
+  box-sizing: border-box
+
+.search-icon
+  color: #000
+  cursor: pointer
+
+.avatar
+  min-width: 42px !important
+  max-width: 42px !important
+  height: 42px !important
+  padding: 5px
+  font-size: 22px
+  line-height: 33px
+  background: #ffffff
+  color: #5e5e5e
+  border-radius: 100%
+  cursor: pointer
+  margin-left: 10px
+  text-align: center
+
+.menu 
+  background: #ffffff
+
+.separate-btn
+  margin-top: 10px
+
+.menu-btn
+  color: #686868
+
+  &:hover
+    background: #6868682c
+
+  &:focus
+    outline: none !important
+
+.menu-header
+  display: flex
+  align-items: center
+
+.menu-icon
+  color: #686868
