@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { SidenavService } from 'src/app/shared/service/sidenav.service';
+import { SidenavService } from 'src/app/shared/service/sidenav/sidenav.service';
 
 describe('UserHeaderComponent', () => {
   let component: UserHeaderComponent;

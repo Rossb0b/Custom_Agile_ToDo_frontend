@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Scavenger } from '@wishtack/rx-scavenger';
-import { SidenavService } from 'src/app/shared/service/sidenav.service';
+import { SidenavService } from 'src/app/shared/service/sidenav/sidenav.service';
 import { UserService } from 'src/app/shared/service/user/user.service';
 import { User } from 'src/app/shared/interface/user.interface';
 

@@ -16,7 +16,7 @@ export class AuthService {
   ) { }
 
   login(user: User): Promise<any> {
-    return this.apiService.post('/auth/login', user);
+    return this.apiService.post('/auth', user);
   }
 
   logout(): void {
