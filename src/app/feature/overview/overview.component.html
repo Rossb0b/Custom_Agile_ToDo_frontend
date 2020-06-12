@@ -1,0 +1,35 @@
+<div class="overview">
+  <mat-list class="list">
+    <div mat-subheader class="list-header">Mes organisations</div>
+    <mat-list-item>
+      <button mat-button class="add-btn" (click)="addOrganization()">
+        <mat-icon>add</mat-icon>
+        Créer une organisation
+      </button>
+    </mat-list-item>
+    <div class="list-items">
+      <mat-list-item *ngFor="let row of [0,1,2,3,4,5,6,7,8,9]">
+        <img mat-list-icon width="50" height="50" src="https://vignette.wikia.nocookie.net/roblox/images/0/03/Ll.jpg/revision/latest/scale-to-width-down/180?cb=20180515005013" alt="">
+        <div mat-line><strong>Supreme</strong></div>
+        <div mat-line><mat-icon class="small-icon">supervisor_account</mat-icon> 14 membres | <mat-icon class="small-icon">category</mat-icon> 2 projets actifs </div>
+        <div mat-line><mat-icon class="small-icon">schedule</mat-icon> Dernière activité: il y a 4 jours </div>
+      </mat-list-item>
+    </div>
+    <mat-divider class="my-3"></mat-divider>
+    <div mat-subheader class="list-header">Mes projets</div>
+    <mat-list-item>
+      <button mat-button class="add-btn">
+        <mat-icon>add</mat-icon>
+        Créer un projet
+      </button>
+    </mat-list-item>
+    <div class="list-items">
+      <mat-list-item *ngFor="let row of [0,1,2,3,4,5,6,7,8,9]">
+        <img mat-list-icon width="50" height="50" src="https://sguru.org/wp-content/uploads/2017/06/steam-avatar-profile-picture-1065.jpg" alt="">
+        <div mat-line><strong>Site web Supreme</strong></div>
+        <div mat-line><mat-icon class="small-icon">work</mat-icon> Aucune story en cours</div>
+        <div mat-line><mat-icon class="small-icon">schedule</mat-icon> Dernière activité: il y a 4 jours</div>
+      </mat-list-item>
+    </div>
+  </mat-list>
+</div>

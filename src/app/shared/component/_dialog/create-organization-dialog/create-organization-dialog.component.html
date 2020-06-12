@@ -1,0 +1,11 @@
+<div class="dial-container">
+
+  <h5 class="title">Créer une organisation</h5>
+  <div class="container">
+    
+    <form [formGroup]="form" class="form" (ngSubmit)="createOrganisation()">
+      <input formControlName="name" placeholder="Saisir un nom">
+      <button mat-button class="submit-btn mt-2">Continuer</button>
+    </form>
+  </div>
+</div>
