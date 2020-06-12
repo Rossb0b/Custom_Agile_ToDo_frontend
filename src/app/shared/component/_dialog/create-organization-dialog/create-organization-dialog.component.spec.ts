@@ -8,7 +8,7 @@ describe('CreateOrganizationDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateOrganizationDialogComponent ]
+      declarations: [CreateOrganizationDialogComponent],
     })
     .compileComponents();
   }));

@@ -5,7 +5,7 @@ import { CreateOrganizationDialogComponent } from 'src/app/shared/component/_dia
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.sass']
+  styleUrls: ['./overview.component.sass'],
 })
 export class OverviewComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
@@ -17,7 +17,7 @@ export class OverviewComponent implements OnInit {
     const dialogRef = this.dialog.open(CreateOrganizationDialogComponent, {
       panelClass: 'todos',
     });
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
   }
