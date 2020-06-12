@@ -14,11 +14,8 @@ export class OverviewComponent implements OnInit {
   }
 
   addOrganization(): void {
-    const dialogRef = this.dialog.open(CreateOrganizationDialogComponent, {
+    this.dialog.open(CreateOrganizationDialogComponent, {
       panelClass: 'todos',
-    });
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
     });
   }
 }

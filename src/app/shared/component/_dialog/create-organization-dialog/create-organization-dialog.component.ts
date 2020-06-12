@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { OrganizationService } from 'src/app/shared/service/organization/organization.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-organization-dialog',
@@ -9,10 +10,12 @@ import { OrganizationService } from 'src/app/shared/service/organization/organiz
 })
 export class CreateOrganizationDialogComponent implements OnInit {
   form: FormGroup;
+  loading = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private organizationService: OrganizationService,
+    private router: Router,
   ) {
     this.buildForm();
   }
@@ -26,11 +29,18 @@ export class CreateOrganizationDialogComponent implements OnInit {
     });
   }
 
-  async createOrganisation(): Promise<void> {
+  async createOrganization(): Promise<void> {
+    if (!this.form.valid) return;
+
+    this.loading = true;
+
     try {
-      await this.organizationService.create(this.form.value.name);
+      const req = await this.organizationService.create(this.form.value.name);
+      this.router.navigateByUrl(`/organization/${req.organizationId}`);
     } catch (error) {
-      throw error;
+      throw Error(error);
+    } finally {
+      this.loading = false;
     }
   }
 }

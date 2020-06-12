@@ -7,7 +7,7 @@ import { ApiService } from '../api/api.service';
 export class OrganizationService {
   constructor(private apiService: ApiService) { }
 
-  create(name: string): Promise<void> {
+  create(name: string): Promise<any> {
     return this.apiService.post('/organization', { name });
   }
 }
