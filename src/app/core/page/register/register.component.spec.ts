@@ -49,11 +49,12 @@ describe('RegisterComponent', () => {
     expect(router.navigateByUrl).toHaveBeenCalledWith('/login');
   });
 
-  it('should throw', () => {
+  it('should throw', (done) => {
     const userService = TestBed.get(UserService);
     spyOn(userService, 'create').and.callFake(() => Promise.reject('fake error'));
     component.register().catch((e) => {
       expect(e).toEqual('fake error');
+      done();
     });
   });
 });

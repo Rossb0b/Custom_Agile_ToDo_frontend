@@ -6,6 +6,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { UserService } from './shared/service/user/user.service';
 import { HttpClient } from '@angular/common/http';
 import { createHttpLoader } from './shared/angular-material.module';
+import { Router } from '@angular/router';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -48,14 +49,6 @@ describe('AppComponent', () => {
     spyOn(userService, 'connectUser').and.callFake(() => Promise.resolve());
     await component.connectUser();
     expect(userService.connectUser).toHaveBeenCalled();
-  });
-
-  it('connect user should throw', () => {
-    const userService = TestBed.get(UserService);
-    spyOn(userService, 'connectUser').and.callFake(() => Promise.reject('fake error'));
-    component.connectUser().catch((e) => {
-      expect(e).toEqual('fake error');
-    });
   });
 
   it('should createHttpLoader [[angular-material.module.ts]]', () => {

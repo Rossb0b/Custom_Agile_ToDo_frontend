@@ -31,6 +31,7 @@ export class AppComponent {
       await this.userService.connectUser();
     } catch (error) {
       this.router.navigateByUrl('/');
+      return;
     }
   }
 }
