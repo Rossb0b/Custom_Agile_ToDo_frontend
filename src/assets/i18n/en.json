@@ -27,5 +27,19 @@
     "notifsParams": "Notifications settings",
     "help": "Help",
     "logout": "Log out"
+  },
+  "overview": {
+    "myOrganizations": "My organizations",
+    "createOrganization": "Create an organization",
+    "member": "member",
+    "activeProjects": "active projects",
+    "lastActivity": "Last activity",
+    "myProjects": "My projects",
+    "createProject": "Create a project"
+  },
+  "organization": {
+    "createOrganization": "Create an organization",
+    "enterName": "Enter name",
+    "continue": "Continue"
   }
 }
