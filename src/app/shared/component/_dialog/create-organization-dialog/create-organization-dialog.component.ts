@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { OrganizationService } from 'src/app/shared/service/organization/organization.service';
 import { Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-create-organization-dialog',
@@ -13,6 +14,7 @@ export class CreateOrganizationDialogComponent implements OnInit {
   loading = false;
 
   constructor(
+    public dialogRef: MatDialogRef<CreateOrganizationDialogComponent>,
     private formBuilder: FormBuilder,
     private organizationService: OrganizationService,
     private router: Router,
@@ -42,5 +44,9 @@ export class CreateOrganizationDialogComponent implements OnInit {
     } finally {
       this.loading = false;
     }
+  }
+
+  closeDialog(): void {
+    this.dialogRef.close();
   }
 }

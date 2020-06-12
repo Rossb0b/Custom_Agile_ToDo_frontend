@@ -8,6 +8,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { OrganizationService } from 'src/app/shared/service/organization/organization.service';
 import { Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material';
 
 describe('CreateOrganizationDialogComponent', () => {
   let component: CreateOrganizationDialogComponent;
@@ -23,6 +24,12 @@ describe('CreateOrganizationDialogComponent', () => {
         ReactiveFormsModule,
         RouterTestingModule,
         HttpClientTestingModule,
+      ],
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: { close: () => {} },
+        },
       ],
     })
     .compileComponents();
@@ -67,5 +74,11 @@ describe('CreateOrganizationDialogComponent', () => {
     spyOn(organizationService, 'create');
     component.createOrganization();
     expect(organizationService.create).not.toHaveBeenCalled();
+  });
+
+  it('should close dialog', () => {
+    spyOn(component.dialogRef, 'close');
+    component.closeDialog();
+    expect(component.dialogRef.close).toHaveBeenCalled();
   });
 });
