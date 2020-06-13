@@ -7,7 +7,9 @@ import { UserHeaderComponent } from '../../navigation/user-header/user-header.co
 import { UserFooterComponent } from '../../navigation/user-footer/user-footer.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { UserAsideComponent } from '../../navigation/user-aside/user-aside.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OverviewComponent } from 'src/app/feature/overview/overview.component';
+import { CreateOrganizationDialogComponent } from 'src/app/shared/component/_dialog/create-organization-dialog/create-organization-dialog.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { FormsModule } from '@angular/forms';
     UserHeaderComponent,
     UserFooterComponent,
     UserAsideComponent,
+    OverviewComponent,
+    CreateOrganizationDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +26,8 @@ import { FormsModule } from '@angular/forms';
     AngularMaterialModule,
     DeviceDetectorModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
   ],
+  entryComponents: [CreateOrganizationDialogComponent],
 })
 export class DefaultLayoutModule { }

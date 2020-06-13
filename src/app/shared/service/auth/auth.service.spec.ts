@@ -4,6 +4,7 @@ import { AuthService } from './auth.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ApiService } from '../api/api.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { User } from '../../interface/user.interface';
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -21,10 +22,11 @@ describe('AuthService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should login', () => {
+  it('should login', async () => {
     const apiService = TestBed.get(ApiService);
     spyOn(apiService, 'post').and.callFake(() => Promise.resolve({}));
-    service.login({} as any).then((res: any) => expect(res).toEqual({}));
+    const res = await service.login({} as User);
+    expect(res).toEqual({});
   });
 
   it('isLoggedIn should return false', () => {

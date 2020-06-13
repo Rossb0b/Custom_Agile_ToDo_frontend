@@ -1,8 +1,8 @@
 <div class="login-card">
   <h5 class="title">{{ 'login.sentence' | translate }}</h5>
   <form [formGroup]="form" (ngSubmit)="login()">
-    <input type="text" placeholder="{{ 'login.enterEmail' | translate }}" formControlName="email">
-    <input type="password" placeholder="{{ 'login.enterPassword' | translate }}" class="mt-1" formControlName="password">
+    <input type="text" placeholder="{{ 'login.enterEmail' | translate }}" class="main-input" formControlName="email">
+    <input type="password" placeholder="{{ 'login.enterPassword' | translate }}" class="mt-1 main-input" formControlName="password">
     <button mat-button class="submit-btn" [disabled]="loading ? '' : null">
       <mat-spinner diameter="20" class="loading-spinner" *ngIf="loading"></mat-spinner> <ng-container *ngIf="!loading">
         {{ 'login.doLogin' | translate }}

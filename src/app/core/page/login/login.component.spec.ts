@@ -64,7 +64,7 @@ describe('LoginComponent', () => {
     expect(userService.setUser).toHaveBeenCalledWith('jacky');
   });
 
-  it('should throw', () => {
+  it('should throw', (done) => {
     const authService = TestBed.get(AuthService);
     spyOn(authService, 'login').and.callFake(() => Promise.reject('fake error'));
     component.form.setValue({
@@ -73,6 +73,7 @@ describe('LoginComponent', () => {
     }); // to make form invalid
     component.login().catch((e) => {
       expect(e).toEqual('fake error');
+      done();
     });
   });
 });

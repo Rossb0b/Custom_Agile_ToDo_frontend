@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { SidenavService } from 'src/app/shared/service/sidenav.service';
+import { SidenavService } from 'src/app/shared/service/sidenav/sidenav.service';
 import { MatSidenav } from '@angular/material';
 
 @Component({

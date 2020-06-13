@@ -27,5 +27,19 @@
     "notifsParams": "Paramèters de notifications",
     "help": "Aide",
     "logout": "Se déconnecter"
+  },
+  "overview": {
+    "myOrganizations": "Mes organisations",
+    "createOrganization": "Créer une organisation",
+    "member": "membre",
+    "activeProjects": "projects actifs",
+    "lastActivity": "Dernière activité",
+    "myProjects": "Mes projets",
+    "createProject": "Créer un projet"
+  },
+  "organization": {
+    "createOrganization": "Créer une organisation",
+    "enterName": "Saisir un nom",
+    "continue": "Continuer"
   }
 }

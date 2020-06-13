@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-user-footer',
   templateUrl: './user-footer.component.html',
-  styleUrls: ['./user-footer.component.sass']
+  styleUrls: ['./user-footer.component.sass'],
 })
 export class UserFooterComponent implements OnInit {
   lang: 'fr' | 'en';

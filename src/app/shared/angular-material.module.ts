@@ -27,7 +27,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 export function createHttpLoader(http: HttpClient) {
-	return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 

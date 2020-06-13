@@ -5,6 +5,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { take } from 'rxjs/operators';
 import { ApiService } from '../api/api.service';
+import { User } from '../../interface/user.interface';
 
 describe('UserService', () => {
   let service: UserService;
@@ -34,10 +35,11 @@ describe('UserService', () => {
     expect(service.getCurrentUserValue()).toBeNull();
   });
 
-  it('should create', () => {
+  it('should create', async () => {
     const apiService = TestBed.get(ApiService);
     spyOn(apiService, 'post').and.callFake(() => Promise.resolve({}));
-    service.create({} as any).then((res: any) => expect(res).toEqual({}));
+    const res = await service.create({} as User);
+    expect(res).toEqual({});
   });
 
   it('should connect user', async () => {
@@ -48,9 +50,9 @@ describe('UserService', () => {
     expect(service.setUser).toHaveBeenCalledWith({ id: 1 });
   });
 
-  it('connect user should throw', () => {
+  it('connect user should throw', (done) => {
     const apiService = TestBed.get(ApiService);
     spyOn(apiService, 'get').and.callFake(() => Promise.reject('fake error'));
-    service.connectUser().catch((e) => { expect(e).toEqual(Error('fake error')); });
+    service.connectUser().catch((e) => { expect(e).toEqual(Error('fake error')); done(); });
   });
 });

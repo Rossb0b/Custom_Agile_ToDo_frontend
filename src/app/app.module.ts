@@ -22,7 +22,7 @@ import { TranslateModule, TranslateLoader, TranslateService, TranslateStore } fr
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export function createHttpLoader(http: HttpClient) {
-	return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
@@ -42,8 +42,8 @@ export function createHttpLoader(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: createHttpLoader, // exported factory function needed for AoT compilation
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
   ],
   providers: [

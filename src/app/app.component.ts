@@ -13,9 +13,9 @@ export class AppComponent {
     private translateService: TranslateService,
     private userService: UserService,
     private router: Router,
-	) { }
+  ) { }
 
-	ngOnInit() {
+  ngOnInit() {
     // Configure the TranslateService
     this.translateService.addLangs(['en', 'fr']);
     const lang = localStorage.getItem('preferredLang') || navigator.language.split('-')[0]; // .split('-')[0] transform fr-FR into fr
@@ -25,12 +25,13 @@ export class AppComponent {
       this.userService.connectUser();
     }
   }
-  
+
   async connectUser(): Promise<void> {
     try {
       await this.userService.connectUser();
     } catch (error) {
       this.router.navigateByUrl('/');
+      return;
     }
   }
 }
