@@ -6,7 +6,6 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { UserService } from './shared/service/user/user.service';
 import { HttpClient } from '@angular/common/http';
 import { createHttpLoader } from './shared/angular-material.module';
-import { Router } from '@angular/router';
 
 describe('AppComponent', () => {
   let component: AppComponent;

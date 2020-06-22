@@ -4,14 +4,10 @@ import { ApiService } from '../api/api.service';
 @Injectable({
   providedIn: 'root',
 })
-export class OrganizationService {
+export class BoardService {
   constructor(private apiService: ApiService) { }
 
-  create(name: string): Promise<any> {
-    return this.apiService.post('/organization', { name });
-  }
-
   getAll(): Promise<any> {
-    return this.apiService.get('/organization');
+    return this.apiService.get('/board');
   }
 }
