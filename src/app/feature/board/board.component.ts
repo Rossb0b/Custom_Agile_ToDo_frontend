@@ -5,6 +5,8 @@ import { MatIconRegistry, MatDialog } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CreateListComponent } from 'src/app/shared/component/_dialog/create-list/create-list.component';
 import { CreateCardComponent } from 'src/app/shared/component/_dialog/create-card/create-card.component';
+import { BoardService } from 'src/app/shared/service/board/board.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-board',
@@ -13,11 +15,16 @@ import { CreateCardComponent } from 'src/app/shared/component/_dialog/create-car
 })
 export class BoardComponent implements OnInit {
   fakeAvatars = [];
+  boardId = this.route.snapshot.params.id;
+  board;
+
   constructor(
     private http: HttpClient,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
     private dialog: MatDialog,
+    private boardService: BoardService,
+    private route: ActivatedRoute,
   ) {
     this.matIconRegistry.addSvgIcon(
       `user_add`,
@@ -35,13 +42,21 @@ export class BoardComponent implements OnInit {
         throw error;
       }
     }
+
+    try {
+      this.board = await this.boardService.find(this.boardId);
+    } catch (error) {
+      throw error;
+    }
+
+    console.log(this.board);
   }
 
   addList(): void {
     this.dialog.open(CreateListComponent);
   }
 
-  addCard(): void {
-    this.dialog.open(CreateCardComponent);
+  addCard(list): void {
+    this.dialog.open(CreateCardComponent, { data: list });
   }
 }

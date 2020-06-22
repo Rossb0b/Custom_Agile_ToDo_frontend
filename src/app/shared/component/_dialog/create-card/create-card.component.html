@@ -1,8 +1,8 @@
 <div class="dial-container">
   <h5 class="title">Ajouter une carte</h5>
-  <form [formGroup]="form">
-    <input type="text" class="main-input" placeholder="Saisir le titre" formControlName="title">
-    <textarea rows="10" class="main-input" placeholder="Saisir le contenu" formControlName="content"></textarea>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" class="main-input" placeholder="Saisir le titre" formControlName="name">
+    <textarea rows="10" class="main-input" placeholder="Saisir le contenu" formControlName="description"></textarea>
     <button mat-button class="submit-btn mt-2">Valider</button>
     <a class="cancel-link" (click)="closeDialog()">Annuler</a>
   </form>

@@ -10,4 +10,12 @@ export class BoardService {
   getAll(): Promise<any> {
     return this.apiService.get('/board');
   }
+
+  find(id: string): Promise<any> {
+    return this.apiService.get('/board/' + id);
+  }
+
+  createCard(card) {
+    return this.apiService.post('/card', card);
+  }
 }
