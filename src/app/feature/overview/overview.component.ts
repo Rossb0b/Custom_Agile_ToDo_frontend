@@ -10,6 +10,8 @@ import { BoardService } from 'src/app/shared/service/board/board.service';
   styleUrls: ['./overview.component.sass'],
 })
 export class OverviewComponent implements OnInit {
+  boards;
+
   constructor(
     public dialog: MatDialog,
     private organizationService: OrganizationService,
@@ -28,8 +30,8 @@ export class OverviewComponent implements OnInit {
 
   async initialize(): Promise<void> {
     try {
-      // await this.organizationService.getAll();
-      await this.boardService.getAll();
+      await this.organizationService.getAll();
+      this.boards = await this.boardService.getAll();
     } catch (error) {
       throw error;
     }

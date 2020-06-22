@@ -24,9 +24,9 @@
       </button>
     </mat-list-item>
     <div class="list-items">
-      <mat-list-item *ngFor="let row of [0,1,2,3,4,5,6,7,8,9]">
+      <mat-list-item *ngFor="let board of boards" [routerLink]="['/app/board/' + board._id ]">
         <img mat-list-icon width="50" height="50" src="https://sguru.org/wp-content/uploads/2017/06/steam-avatar-profile-picture-1065.jpg" alt="">
-        <div mat-line><strong>Site web Supreme</strong></div>
+        <div mat-line><strong>{{ board.name }}</strong></div>
         <div mat-line><mat-icon class="small-icon">work</mat-icon> Aucune story en cours</div>
         <div mat-line><mat-icon class="small-icon">schedule</mat-icon> {{ 'overview.lastActivity' | translate }}: il y a 4 jours</div>
       </mat-list-item>
