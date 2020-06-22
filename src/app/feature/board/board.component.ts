@@ -48,8 +48,6 @@ export class BoardComponent implements OnInit {
     } catch (error) {
       throw error;
     }
-
-    console.log(this.board);
   }
 
   addList(): void {

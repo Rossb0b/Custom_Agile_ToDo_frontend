@@ -21,7 +21,6 @@ export class CreateCardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.data);
   }
 
   buildForm(): void {

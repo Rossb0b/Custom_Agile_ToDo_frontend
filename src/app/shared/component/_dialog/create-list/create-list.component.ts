@@ -31,14 +31,12 @@ export class CreateListComponent implements OnInit {
 
   async onSubmit(): Promise<void> {
     try {
-      await this.boardService.createList({ ...this.form.value, board: this.data._id });
     } catch (error) {
       throw error;
     }
   }
 
   closeDialog(): void {
-    console.log('ah');
     this.dialogRef.close();
   }
 }
