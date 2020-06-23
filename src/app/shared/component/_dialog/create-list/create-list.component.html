@@ -1,0 +1,10 @@
+<div class="dial-container">
+
+  <h5 class="title">Ajouter une liste</h5>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Saisir le nom" class="main-input">
+    <button mat-button class="submit-btn mt-2">Valider</button>
+    <a class="cancel-link" (click)="closeDialog()">Annuler</a>
+  </form>
+
+</div>

@@ -10,6 +10,9 @@ import { UserAsideComponent } from '../../navigation/user-aside/user-aside.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverviewComponent } from 'src/app/feature/overview/overview.component';
 import { CreateOrganizationDialogComponent } from 'src/app/shared/component/_dialog/create-organization-dialog/create-organization-dialog.component';
+import { BoardComponent } from 'src/app/feature/board/board.component';
+import { CreateListComponent } from 'src/app/shared/component/_dialog/create-list/create-list.component';
+import { CreateCardComponent } from 'src/app/shared/component/_dialog/create-card/create-card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { CreateOrganizationDialogComponent } from 'src/app/shared/component/_dia
     UserAsideComponent,
     OverviewComponent,
     CreateOrganizationDialogComponent,
+    BoardComponent,
+    CreateListComponent,
+    CreateCardComponent,
   ],
   imports: [
     CommonModule,
@@ -28,6 +34,10 @@ import { CreateOrganizationDialogComponent } from 'src/app/shared/component/_dia
     FormsModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [CreateOrganizationDialogComponent],
+  entryComponents: [
+    CreateOrganizationDialogComponent,
+    CreateListComponent,
+    CreateCardComponent,
+  ],
 })
 export class DefaultLayoutModule { }

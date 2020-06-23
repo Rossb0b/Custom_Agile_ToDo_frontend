@@ -1,0 +1,41 @@
+<div class="main-container">
+  
+  <div class="my-3">
+    <input type="text" placeholder="Rechercher">
+    <mat-icon class="search-icon">search</mat-icon>
+    
+    <div class="members">
+      <img *ngFor="let image of fakeAvatars" src="{{ image }}" alt="" width="44" height="44">
+      <span class="add-user" matTooltip="Ajouter un utilisateur au projet">
+        <mat-icon class="add-user-icon" svgIcon="user_add"></mat-icon>
+      </span>
+    </div>
+  </div>
+  <div class="subcontainer">
+    <div class="cards-container" *ngIf="board">
+      <div class="card-box" *ngFor="let list of board.list">
+        <div class="card-header">
+          {{ list.name }}
+          <span class="float-right">
+            <mat-icon class="menu-icon">menu</mat-icon>
+          </span>
+        </div>
+        <div class="card" *ngFor="let card of list.card">
+          {{ card.name }}
+          <mat-chip-list class="m-1">
+            <mat-chip>Papadum</mat-chip>
+            <mat-chip>Naan</mat-chip>
+            <mat-chip>Dal</mat-chip>
+          </mat-chip-list>
+        </div>
+        <button mat-stroked-button class="add-card-btn mb-1" (click)="addCard(list)">Ajouter une carte</button>
+      </div>
+      <div class="card-box">
+        <button mat-button class="add-list-btn" (click)="addList()">
+          <mat-icon>add</mat-icon>
+          <span>Ajouter une liste</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

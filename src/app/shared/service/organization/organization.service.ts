@@ -10,4 +10,8 @@ export class OrganizationService {
   create(name: string): Promise<any> {
     return this.apiService.post('/organization', { name });
   }
+
+  getAll(): Promise<any> {
+    return this.apiService.get('/organization');
+  }
 }
