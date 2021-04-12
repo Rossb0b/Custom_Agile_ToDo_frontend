@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://clubagilebackend-env.eba-xpqhfki4.us-east-2.elasticbeanstalk.com/api',
+  apiUrl: 'http://localhost:3000/api',
 };
 
 /*

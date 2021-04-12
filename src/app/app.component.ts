@@ -18,7 +18,7 @@ export class AppComponent {
   ngOnInit() {
     // Configure the TranslateService
     this.translateService.addLangs(['en', 'fr']);
-    const lang = localStorage.getItem('preferredLang') || navigator.language.split('-')[0]; // .split('-')[0] transform fr-FR into fr
+    const lang = localStorage.getItem('preferredLang') || navigator.language.split('-')[0];
     this.translateService.use(lang);
     this.connectUser();
     if (!this.userService.getCurrentUserValue()) {
